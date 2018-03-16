@@ -1,5 +1,6 @@
 package com.acme.bank.activity;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -12,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.acme.bank.R;
 import com.acme.bank.fragments.CrediCardFragment;
@@ -20,6 +22,7 @@ import com.acme.bank.fragments.SavingsAcc;
 import com.applaunch.api.AppLaunch;
 import com.applaunch.api.AppLaunchException;
 import com.ibm.mobilefirstplatform.clientsdk.android.analytics.api.Analytics;
+import com.ibm.mobilefirstplatform.clientsdk.android.analytics.internal.BMSAnalytics;
 import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
 
 import java.util.ArrayList;
@@ -48,7 +51,7 @@ public class CustomViewIconTextTabsActivity extends AppCompatActivity implements
         activeSessionStartTime = System.currentTimeMillis();
         analytics =new AnalyticsLib();
         BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_US_SOUTH);
-        Analytics.init(getApplication(), "Acme Bank", "08f14171-735f-43cc-b1a8-c9c0abcb9344", true, Analytics.DeviceEvent.ALL);
+        Analytics.init(getApplication(), "Acme Bank", "7fc30d1d-1419-48e5-a331-07239fb987dd", true, Analytics.DeviceEvent.ALL);
         Analytics.enable();
         //  End of Initialisation
 
@@ -109,6 +112,14 @@ public class CustomViewIconTextTabsActivity extends AppCompatActivity implements
 
 
 
+            }
+        });
+
+        ImageButton feedback =(ImageButton)findViewById(R.id.Feedback);
+        feedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Analytics.triggerFeedbackMode();
             }
         });
         setupTabIcons();
@@ -239,7 +250,6 @@ public class CustomViewIconTextTabsActivity extends AppCompatActivity implements
             return mFragmentTitleList.get(position);
         }
     }
-
 
 
 }

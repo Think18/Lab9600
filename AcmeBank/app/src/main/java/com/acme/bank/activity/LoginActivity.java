@@ -40,7 +40,7 @@ public class LoginActivity extends AppCompatActivity implements AppLaunchActions
      * TODO: remove after connecting to a real authentication system.
      */
     private static final String[] DUMMY_CREDENTIALS = new String[]{
-            "user:password","eric:norton"
+            "aditya:aditya","eric:norton"
     };
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
