@@ -8,4 +8,4 @@ For using Mobile Analytics, the mobile Application user needs to use the Analyti
 
 This lab focuses on how to Analytics Logger APIs to send custom Data from mobile application to log various information about the User Navigation patterns. The recorded custom data then is used to orchestrate different custom Charts  which can help the business/operations to understand the user flow and various navigation patterns.
  
-[Click here to download the Lab Instruction Manual] : https://github.com/Think18/Lab9600/blob/master/Lab-9600-Harness%20the%20power%20of%20IBM%20Mobile%20Analytics%20to%20define%20and%20derive%20customized%20insights.pdf
+[Click here to download the Lab Instruction Manual](https://github.com/Think18/Lab9600/blob/master/Lab-9600-Harness%20the%20power%20of%20IBM%20Mobile%20Analytics%20to%20define%20and%20derive%20customized%20insights.pdf)
